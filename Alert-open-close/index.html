@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class = "alert-box" id="alert">
+        <p id = "content">alert box</p>
+        <!--<button onclick = "closeAlert('')">닫기</button>-->
+        <button id = "close">닫기</button>
+    </div>
+
+    <button onclick = "openID('아이디입력하셈')">아이디</button>
+    <button onclick = "openID('비번입력하셈')">비밀번호</button>
+
+    <script>
+        // function openID() {
+        //     document.getElementById('content').innerHTML = "아이디를 입력하세요";
+        //     document.getElementById('alert').style.display = 'block';
+        // }
+        // function openPW() {
+        //     document.getElementById('content').innerHTML = "비밀번호를 입력하세요";
+        //     document.getElementById('alert').style.display = 'block';
+        // }
+        function openID(hole) {
+            document.getElementById('content').innerHTML = hole;
+            document.getElementById('alert').style.display = 'block';
+        }
+        // function closeAlert() {
+        //     document.getElementById('alert').style.display = 'none';
+        // }
+
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display = 'none';
+        }); //이벤트리스너, click이 이벤트: mouseover, keydown, scroll 등등이 되면 function 실행
+    </script>
+</body>
+</html>
